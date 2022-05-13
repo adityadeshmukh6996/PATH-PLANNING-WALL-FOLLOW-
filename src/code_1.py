@@ -43,11 +43,11 @@ def action_callback(goal):
 #	success = True
 #	start = goal.start_drving
 #	if start == True :		 
-#rospy.wait_for_service('/gazebo/delete_model')
-#delete_model_service = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
-#kk = DeleteModelRequest()
-#kk.model_name = "obstacle"
-#result = delete_model_service(kk)
+rospy.wait_for_service('/gazebo/delete_model')
+delete_model_service = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
+kk = DeleteModelRequest()
+kk.model_name = "obstacle"
+result = delete_model_service(kk)
 print(result)
 def callback(scan):
 		global l, r, mid
