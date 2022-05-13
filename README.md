@@ -9,3 +9,5 @@ The most important topics are, of course, the ones dealing with the velocity com
 
 I used the docker to pull image and run the ROS applications. 
 I attached the docker file in the repository. 
+
+Have fun and try thr code in gazebo in the environment as shown in the image 
