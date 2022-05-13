@@ -1,0 +1,21 @@
+version: '2.4'
+services:
+  amr-base:
+   image: amr_miniprj:1.0
+   environment:
+       ROS_IP: 192.168.6.118
+       ROS_MASTER_URI: http://192.168.6.111:11311
+       DISPLAY: $DISPLAY
+       QT_X11_NO_MITSHM: '1'
+   network_mode: host
+   privileged: true
+   stdin_open: true
+   volumes:
+   - /tmp/.X11-unix:/tmp/.X11-unix
+   - $HOME/.Xauthority:/root/.Xauthority
+   - /home/aditya/catkin_ws/src/ad-213410_tier2:/root/catkin_ws/src/ad-213410_tier2
+   - /home/aditya/catkin_ws/src/ad-213410_tier3:/root/catkin_ws/src/ad-213410_tier3
+   - /home/aditya/catkin_ws/src/amr-miniprj:/root/catkin_ws/src/amr-miniprj
+   
+  # command: roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+   command: tail -f /dev/null
