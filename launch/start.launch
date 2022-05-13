@@ -1,0 +1,3 @@
+<launch>
+ <node pkg="ad_213410_miniprj" type="code_1.py" name="project"/>
+</launch> 
